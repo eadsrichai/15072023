@@ -26,6 +26,7 @@
 
 
 <?php
+if(isset($_GET['mark'])){
 $mark = $_GET['mark'];
     $grade = "";
     if($mark < 50){
@@ -48,7 +49,7 @@ $mark = $_GET['mark'];
         echo "คะแนนอยู่นอกขอบเขตที่กำหนดไว้ [0-100]";
     }
         echo  "<label class='fs-2'>คะแนนรวม = ". $mark . " เกรด ". $grade . "</label>";
-
+}
 ?>
 
 </div>
