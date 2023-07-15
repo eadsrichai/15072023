@@ -8,19 +8,20 @@
 </head>
 <body>
     <div class="container">
+    <div>
+            <p class="fs-1 bg bg-primary text-white mt-3  p-3">โปรแกรมคำนวณผลการเรียน</p>
+        </div>
     <form action="Ex5.php" method="GET">
        <div class="row mt-3">
             <div class="col-3">
-                <input type="text" class="form-control" placeholder="กรุณากรอกคะแนน" value="" name="mark" />
+                <input type="text"  class="form-control fs-4" placeholder="กรุณากรอกคะแนน" value="" name="mark" />
             </div>
             <div class="col-3">
                 <input type="submit" class="btn btn-primary" value="คำนวณผลการเรียน" name="cal" />
             </div>
        </div>
     </form>
-    </div>
-</body>
-</html>
+ 
 
 
 
@@ -46,8 +47,10 @@ $mark = $_GET['mark'];
     }else if($mark < 0 || $mark > 100){
         echo "คะแนนอยู่นอกขอบเขตที่กำหนดไว้ [0-100]";
     }
-        echo  "คะแนนรวม = ". $mark . " เกรด ". $grade;
-
-    
+        echo  "<label class='fs-2'>คะแนนรวม = ". $mark . " เกรด ". $grade . "</label>";
 
 ?>
+
+</div>
+</body>
+</html>
